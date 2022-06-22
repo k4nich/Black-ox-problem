@@ -6,3 +6,7 @@
 - [1236번: 성 지키기](https://www.acmicpc.net/problem/1236)
 
 - [1672번: DNA 해독](https://www.acmicpc.net/problem/1672)
+
+- [25294번: 달팽이와 쿼리](https://www.acmicpc.net/problem/25294)
+
+- [1715번: 카드 정렬하기](https://www.acmicpc.net/problem/1715)
