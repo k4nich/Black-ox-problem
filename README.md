@@ -10,3 +10,5 @@
 - [25294번: 달팽이와 쿼리](https://www.acmicpc.net/problem/25294)
 
 - [1715번: 카드 정렬하기](https://www.acmicpc.net/problem/1715)
+
+- [1700번: 멀티탭 스케줄링](https://www.acmicpc.net/problem/1700)

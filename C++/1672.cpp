@@ -31,8 +31,7 @@ int main()
 	std::cin >> inp;
 	std::cin >> str;
 
-	while (str.length() > 1)
-	{
+	while (str.length() > 1) {
 		int	pre = str.length() - 2;
 		int	last = str.length() - 1;
 

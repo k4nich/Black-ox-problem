@@ -27,11 +27,11 @@ int getLayer(int size, int z)
 
 	if (max == z)
 		return totalLayer;
-	if (size % 2)
-	{
+	if (size % 2) {
 		int c = ((max - 1 - z) / 4) * -1;
 		double tmp = std::sqrt(1 - (c * 4));
 		double x;
+
 		x = (-1 + tmp) / 2;
 		if (x < 0)
 			x = (-1 - tmp) / 2;
@@ -44,31 +44,29 @@ int getLayer(int size, int z)
 
 void execQuery(int flag, int size, int x, int y, int z)
 {
-	if (flag == 1)
-	{
+	if (flag == 1) {
 		int layer = std::min(std::min(size - x + 1, x), std::min(size - y + 1, y));
 		int min = getMin(size, layer);
 		int max = min + ((size - (layer * 2) + 1) * 4) - 1;
+
 		if (x == layer || y == size - layer + 1)
 			printf("%d\n", min + x + y - (layer * 2));
 		else if (x == size - layer + 1 || y == layer)
 			printf("%d\n",max - x - y + 1 + (layer * 2));
 	}
-	else
-	{
+	else {
 		int layer = getLayer(size, z);
 		int min = getMin(size, layer);
 		int max = min + ((size - (layer * 2) + 1) * 4) - 1;
 		int mid = (min + max) / 2 + 1;
-		if (z <= mid)
-		{
+
+		if (z <= mid) {
 			if (z <= (min + mid) / 2)
 				printf("%d %d\n",layer, z - min + layer);
 			else
 				printf("%d %d\n", z - (min + mid) / 2 + layer, size - layer + 1);
 		}
-		else
-		{
+		else {
 			if (z <= (mid + max) / 2 + 1)
 				printf("%d %d\n", size - layer + 1, (mid + max) / 2 + 1 - z + layer);
 			else
